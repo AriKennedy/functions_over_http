@@ -4,7 +4,7 @@ from django.http.request import HttpRequest
 
 # Create your views here.
 def hey_you(request, name):
-    return HttpResponse(f"Hello {name}!")
+    return HttpResponse(f"Hey, {name}!")
 
 def how_old(request, end, birthyear):
     age = int(end) - int(birthyear)
@@ -12,4 +12,4 @@ def how_old(request, end, birthyear):
 
 def canITakeYourOrder(request, burgers, fries, drinks):
     total = (int(burgers) * 4.50) + (int(fries) * 1.50) + (int(drinks) * 1.00)
-    return HttpResponse(f"Your total is ${total}")
+    return HttpResponse(total)

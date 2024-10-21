@@ -19,7 +19,7 @@ from app.views import hey_you, how_old, canITakeYourOrder
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/<name>', hey_you),
-    path('age-in/<end>/<birthyear>', how_old),
-    path('total/<burgers>/<fries>/<drinks>', canITakeYourOrder)
+    path('hey/<str:name>', hey_you),
+    path('age-in/<int:end>/<int:birthyear>', how_old),
+    path('order-total/<int:burgers>/<int:fries>/<int:drinks>', canITakeYourOrder)
 ]
